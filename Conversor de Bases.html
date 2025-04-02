@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Bases</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: rgb(246, 109, 109);
+        padding:20px;
+    }
+
+    .container {
+        background-color: rgb(140, 189, 232);
+        padding: 20px ;
+        border-radius: 8px;
+        display: inline-block;
+        padding-top: 12px;
+    }
+    .container2{
+        background-color: rgb(91, 171, 241);
+        padding: 20px ;
+        border-radius: 8px;
+        display: inline-block;
+        padding-inline: 100px;
+    }
+    .container3 {
+    position: absolute; /* Define posição absoluta em relação ao elemento pai com position: relative */
+    top: 20px; /* Define a distância do topo */
+    right: 250px; /* Define a distância da borda direita */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: inline-block; /* Permite que o elemento tenha largura baseada no conteúdo */
+}
+
+    input {
+            padding: 8px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            border: 1px solid #ccc; /* Borda cinza clara */
+            border-radius: 4px; /* Bordas arredondadas */
+            width: 200px; /* Largura fixa */
+            margin-right: 10px; /* Espaço entre o input e o botão */
+    }
+
+    button {
+            background: #152e3d;
+            color: rgb(156, 202, 236);
+            border: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+   
+</style>
+<body>
+    
+<div class="container">
+    <h1>Future Machine</h1>
+ <h4>Sistema de Conversão de bases</h4>
+ <div class="container2">
+ <input id="decimal" type="text" placeholder="Insira um valor em decimal"> <br><br> <button onclick="calcularD()">Ver</button> <b></b>
+<br>
+<br>
+<input id="binario"  type="text" placeholder="Insira um valor em Binário"><br><br><button onclick="calcularB()">Ver</button>
+<br>
+<br>
+<input id="octal"  type="text" placeholder="Insira um valor em Octal"><br><br><button onclick="calcularO()">Ver</button>
+<br>
+<br>
+<input id="hexadecimal" type="text" placeholder="Insira um valor em Hexadecimal"><br><br><button onclick="calcularH()">Ver</button> 
+    <br>
+    <br>
+    <div id="txt"></div>
+    <br>
+    <br>
+    <br>
+</div>
+</div>
+<div class="container3"><a href="C:\Users\User\Documents\SPTECH\ARQUI COMP\CALCULADORA CSS.html"> <button onclick="">Ir para <br> Calculadora</button></a></div>
+
+    </a>
+</body>
+</html>
+
+<script>
+    function calcularD() {
+            var axdecimal = Number(decimal.value);
+            txt.innerHTML = `<br>
+            O Valor em OCTAL é: <b>${axdecimal.toString(8)}</b> <br><br>
+            O Valor em HEXADECIMAL é: <b>${axdecimal.toString(16)}</b> <br><br>
+            O Valor em BINÁRIO é: <b>${axdecimal.toString(2)}</b>`
+        }
+    
+    function calcularB() {
+        var axbinario =  Number(binario.value);
+        var axbinario2 =  parseInt(axbinario,2);
+             txt.innerHTML = `<br>
+            O Valor em OCTAL é: <b>${axbinario2.toString(8)}</b> <br><br>
+            O Valor em HEXADECIMAL é: <b>${axbinario2.toString(16)}</b> <br><br>
+            O Valor em DECIMAL é: <b>${axbinario2.toString(10)}
+            </b> <br>`
+    }
+
+        function calcularO() {
+        var axoctal =  Number(octal.value);
+        var axocatl2 =  parseInt(axoctal,8);
+            txt.innerHTML = `<br>
+            O Valor em BINÁRIO é: <b>${axocatl2.toString(2)}</b> <br><br>
+            O Valor em HEXADECIMAL é: <b>${axocatl2.toString(16)}</b> <br><br>
+            O Valor em DECIMAL é: <b>${axocatl2.toString(10)}</b>
+            <br>`
+        }
+
+        function calcularH() {
+        var axhexadecimal2 =  parseInt(hexadecimal.value,16);
+            txt.innerHTML = `<br>
+            O Valor em OCTAL é: <b>${axhexadecimal2.toString(8)}</b> <br><br>
+            O Valor em BINÁRIO é: <b>${axhexadecimal2.toString(2)}</b> <br><br>
+            O Valor em DECIMAL é: <b>${axhexadecimal2.toString(10)}</b>
+            <br>`
+
+        }
+    
+        
+    
+</script>

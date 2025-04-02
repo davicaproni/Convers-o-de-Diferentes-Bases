@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Future Machine</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: mediumorchid;
+        padding:20px;
+    }
+
+    .container {
+        background-color: rgb(198, 217, 234);
+        padding: 20px ;
+        border-radius: 8px;
+        display: inline-block;
+        padding-top: 12px;
+    }
+    .container2{
+        background-color: rgb(119, 182, 238);
+        padding: 20px ;
+        border-radius: 8px;
+        display: inline-block;
+        padding-inline: 100px;
+    }
+    .container3 {
+    position: absolute; /* Define posição absoluta em relação ao elemento pai com position: relative */
+    top: 40px; /* Define a distância do topo */
+    right: 270px; /* Define a distância da borda direita */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: inline-block; /* Permite que o elemento tenha largura baseada no conteúdo */
+}
+    .container4{
+        background-color: rgb(202, 218, 233);
+        padding: 20px ;
+        border-radius: 8px;
+        display: inline-block;
+        padding-inline: 100px;
+        
+    }
+
+    input {
+            padding: 8px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            border: 1px solid #ccc; /* Borda cinza clara */
+            border-radius: 4px; /* Bordas arredondadas */
+            width: 200px; /* Largura fixa */
+            margin-right: 10px; /* Espaço entre o input e o botão */
+    }
+
+    button {
+            background: #152e3d;
+            color: rgb(156, 202, 236);
+            border: none;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+</style>
+<body>
+    <div class="container">
+    <center>
+    <h1>Calculadora Future Machine</h1>
+    <h4>Somas e Subtrações em DIFERENTES bases</h4>
+    <br>
+    <div class="container2">
+    insira o Valor em DECIMAL: <input id="decimal" type="text" placeholder="Ex: 325"> <br><br>
+    insira o valor em BINÁRIO: <input id="binario" type="text" placeholder="Ex: 1010">  <br><br>
+    insira o valor em OCTAL:<input id="octal" type="text" placeholder="Ex:777"> <br><br>
+    insira o valor em HEXADECIMAL:<input id="hexadecimal" type="text" placeholder="Ex: a5f"> <br><br>
+    
+    <button onclick="somar()">Calcular Soma</button>
+    <button onclick="subtrair()">Calcular Subtração</button>
+    <br>
+    <br>
+    <p>O resultado sera apresentado em DECIMAL, para saber o valor em outras basas, basta voltar para a tela de converrsão
+    <div class="conteiner 4"><div id="txt"></div></div>
+    </center>
+</div>
+</div>
+<div class="container3"><a href="C:\Users\User\Documents\SPTECH\ALGORITMOS\CSS.html"> <button onclick="">Ir para Conversão</button></a></div>
+</body>
+</html>
+    <script>
+        function somar() {
+            var axdecimal = parseInt(decimal.value,10) || 0;
+            var axbinario = parseInt(binario.value,2) || 0;
+            var axoctal = parseInt(octal.value,8) || 0;
+            var axhexadecimal = parseInt(hexadecimal.value,16) || 0;
+            
+            var soma = Number(axdecimal) + Number(axbinario) + Number(axoctal) + Number(axhexadecimal);
+            txt.innerHTML = `<br>
+            soma será de : <b>${soma}</b>`;
+        }
+    
+        function subtrair() {
+            var axdecimal = parseInt(decimal.value,10) || 0;
+            var axbinario = parseInt(binario.value,2) || 0;
+            var axoctal = parseInt(octal.value,8) || 0;
+            var axhexadecimal = parseInt(hexadecimal.value,16) || 0;
+            
+            var subtracao = Number(axdecimal) - Number(axbinario) - Number(axoctal) - Number(axhexadecimal);
+            txt.innerHTML = `<br>
+            A Subtração será de : <b>${subtracao}</b>`;
+        }
+    </script>
+</body>
+</html>
+
+        
